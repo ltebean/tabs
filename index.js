@@ -9,15 +9,15 @@
 		if (!elements || elements.length == 0) {
 			return;
 		}
-		each(elements, function(el) {
+		each(elements, function(i,el) {
 			tabs(el);
 		});
 	}
 
 	function each(elements, fn) {
-		Array.prototype.forEach.call(elements, function(el) {
-			fn(el);
-		});
+		for (var i = elements.length - 1; i >= 0; i--) {
+			fn(i, elements[i]);
+		}
 	}
 
 	function hasClass(el, cls) {
@@ -25,7 +25,7 @@
 	}
 
 	function addClass(el, cls) {
-		if (!hasClass(el, cls)){
+		if (!hasClass(el, cls)) {
 			el.className += " " + cls;
 		}
 	}
@@ -42,26 +42,26 @@
 		var tabs = container.querySelectorAll('.tab');
 		var panes = container.querySelectorAll('.tab-pane');
 
-		each(tabs, function(tab) {
+		each(tabs, function(i, tab) {
+			tab.setAttribute('data-tab-index', i);
 			tab.addEventListener('click', function(e) {
-				var target = e.target.getAttribute('data-target');
-				activate(target);
+				activate(e.target.getAttribute('data-tab-index'));
 			});
 		})
 
-		function activate(target) {
-			each(tabs, function(tab) {
-				if (tab.getAttribute('data-target') != target) {
-					removeClass(tab,'active')
+		function activate(index) {
+			each(tabs, function(i, tab) {
+				if (i != index) {
+					removeClass(tab, 'active')
 				} else {
-					addClass(tab,'active')
+					addClass(tab, 'active')
 				}
 			});
-			each(panes, function(pane) {
-				if (pane.getAttribute('data-content') != target) {
-					removeClass(pane,'active')
+			each(panes, function(i, pane) {
+				if (i != index) {
+					removeClass(pane, 'active')
 				} else {
-					addClass(pane,'active')
+					addClass(pane, 'active')
 				}
 			});
 		}

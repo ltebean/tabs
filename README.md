@@ -1,18 +1,18 @@
 ###Usage:
 	
-First you should build the markup as follows, the 'data-target' field specifies the  corresponding relationship between the switch and the tab content
+First you should build the markup as follows, 'tab' and 'tab-pane' are required, use them to indicate which are tabs and content panes:
 
 ```html
 <div class="tab-container">
 	<div class="tabs">
-		<a class="tab active" data-target="home">Home</a>
-		<a class="tab" data-target="profile">Profile</a>
-		<a class="tab" data-target="messages">Messages</a>
+		<a class="tab active">Home</a>
+		<a class="tab">Profile</a>
+		<a class="tab">Messages</a>
 	</div>
 	<div class="tab-panes">
-		<div class="tab-pane active" data-content="home">home</div>
-		<div class="tab-pane"  data-content="profile">profile</div>
-		<div class="tab-pane"  data-content="messages">message</div>
+		<div class="tab-pane active">home</div>
+		<div class="tab-pane">profile</div>
+		<div class="tab-pane" >message</div>
 	</div>
 </div>
 ```
