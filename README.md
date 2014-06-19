@@ -1,6 +1,6 @@
 ###Usage:
 	
-First you should build the markup as follows, 'tab' and 'tab-pane' are required, use them to indicate which are tabs and content panes:
+First you should build the markup as follows, 'tab' and 'tab-pane' are required, use them to indicate which are tabs and content panes. After a tab is clicked, the 'active' class will be added to the corresponding tab:
 
 ```html
 <div class="tab-container">

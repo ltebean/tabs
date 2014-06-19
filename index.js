@@ -9,7 +9,7 @@
 		if (!elements || elements.length == 0) {
 			return;
 		}
-		each(elements, function(i,el) {
+		each(elements, function(i, el) {
 			tabs(el);
 		});
 	}
@@ -45,23 +45,18 @@
 		each(tabs, function(i, tab) {
 			tab.setAttribute('data-tab-index', i);
 			tab.addEventListener('click', function(e) {
-				activate(e.target.getAttribute('data-tab-index'));
+				var index = e.target.getAttribute('data-tab-index');
+				activate(tabs, index);
+				activate(panes, index);
 			});
 		})
 
-		function activate(index) {
+		function activate(tabs, index) {
 			each(tabs, function(i, tab) {
 				if (i != index) {
 					removeClass(tab, 'active')
 				} else {
 					addClass(tab, 'active')
-				}
-			});
-			each(panes, function(i, pane) {
-				if (i != index) {
-					removeClass(pane, 'active')
-				} else {
-					addClass(pane, 'active')
 				}
 			});
 		}
