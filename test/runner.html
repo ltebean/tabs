@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		.tabs{
+			height: 20px;
+		}
+
+		.tabs .tab {
+			display:inline-block;
+			width:100px;
+			height: 100%;
+		}
+
+		.tabs .active {
+			color:red;
+		}
+
+		.tab-panes .tab-pane{
+			border:1px solid #333333;
+			width:400px;
+			padding:20px;
+			display: none
+		}
+		.tab-panes .active{
+			display: block
+		}
+	</style>
+</head>
+<body>
+	<div class="tab-container">
+		<div class="tabs">
+			<a class="tab active" data-target="home">Home</a>
+			<a class="tab" data-target="profile">Profile</a>
+			<a class="tab" data-target="messages">Messages</a>
+			<a class="tab" data-target="settings">Settings</a>
+		</div>
+		<div class="tab-panes">
+			<div class="tab-pane active" data-content="home">home</div>
+			<div class="tab-pane"  data-content="profile">profile</div>
+			<div class="tab-pane"  data-content="messages">message</div>
+			<div class="tab-pane"  data-content="settings">settings</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../index.js"></script>
+	<script type="text/javascript">tabs('.tab-container');</script>
+</body>
+</html>
