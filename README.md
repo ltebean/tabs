@@ -30,10 +30,15 @@ And with the styles that hides the non-active tab pane
 
 Finally makes the markup tabbable:
 
-	var tabs = require('tabs');
+```javascript
+//commonjs
+var tabs = require('tabs');
 
-	tabs('.tab-container');
+//or directly include the script and 'tabs' will be global
 
+// make it tabbable!
+tabs('.tab-container');
+```
 ###Examples:
 	
 See test/runner.html
