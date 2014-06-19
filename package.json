@@ -1,6 +1,6 @@
 {
   "name": "tabs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "pure javascript implementation that quickly makes the markup tabbable",
   "main": "index.js",
   "directories": {

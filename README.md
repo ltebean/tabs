@@ -1,6 +1,6 @@
-###Usage:
+##Usage:
 	
-First you should build the markup as follows, 'tab' and 'tab-pane' are required, use them to indicate which are tabs and content panes. After a tab is clicked, the 'active' class will be added to the corresponding tab:
+First you should build the markup as follows, 'tab' and 'tab-pane' are required, use them to indicate which are tabs and content panes. 
 
 ```html
 <div class="tab-container">
@@ -28,7 +28,7 @@ And with the styles that hides the non-active tab pane
 }
 ```
 
-Finally makes the markup tabbable:
+Finally makes the markup tabbable. After a tab is clicked, the 'active' class will be added to the corresponding tab:
 
 ```javascript
 //commonjs
@@ -39,6 +39,6 @@ var tabs = require('tabs');
 // make it tabbable!
 tabs('.tab-container');
 ```
-###Examples:
+##Examples:
 	
 See test/runner.html
