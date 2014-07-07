@@ -37,8 +37,9 @@ var tabs = require('tabs');
 //or directly include the script and 'tabs' will be global
 
 // make it tabbable!
-tabs('.tab-container');
+var container=document.querySelector('.tab-container')
+tabs(container);
 ```
-##Examples:
+##Example:
 	
-See test/runner.html
+See http://ltebean.github.io/tabs

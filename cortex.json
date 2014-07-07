@@ -1,6 +1,6 @@
 {
-  "name": "tab",
-  "version": "0.1.0",
+  "name": "tabs",
+  "version": "0.2.0",
   "description": "pure javascript implementation that quickly makes the markup tabbable",
   "main": "index.js",
   "repository": "git://github.com/ltebean/tabs.git",
@@ -15,11 +15,5 @@
   "bugs": {
     "url": "http://github.com/ltebean/tabs"
   },
-  "homepage": "http://github.com/ltebean/tabs",
-  "engines": {
-    "neuron": "*"
-  },
-  "devDependencies": {
-    "assert": "*"
-  }
+  "homepage": "http://github.com/ltebean/tabs"
 }
