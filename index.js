@@ -10,6 +10,7 @@
 
     each(tabs, function(i, tab) {
       tab.addEventListener('click', function(e) {
+        e.preventDefault();
         activate(tabs, i);
         activate(panes, i);
       });
